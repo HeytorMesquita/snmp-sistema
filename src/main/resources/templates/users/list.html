@@ -1,0 +1,20 @@
+<html>
+
+	<body>
+		
+		<h1>Users Page</h1>
+		
+		
+		<table>
+		   <th:block th:each="user : ${users}" th:if="${user.flag} == true">
+		      <tr>
+		         <td th:text="${user.id}">...</td>
+				 <td th:text="${user.name}">...</td>
+				 <td th:text="${user.cpf}">...</td>
+		      </tr>
+		   </th:block>
+		</table>
+	
+	</body>
+
+</html>

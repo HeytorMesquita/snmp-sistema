@@ -9,16 +9,20 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({"br.imd.pds.controllers"})
+@ComponentScan({"br.com.snmp.controllers"})
 @Import(value = {LoginSecurityConfig.class})
 public class LoginApplicationConfig {
 
-	@Bean
-	public InternalResourceViewResolver viewResolver() {
-		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-//		viewResolver.setViewClass(viewClass);
-		viewResolver.setPrefix("/templates/");
-		viewResolver.setSuffix(".html");
-		return viewResolver;
-	}
+  /**
+  * Método usado para visualizar resolvedor de prefixo e sufixo.
+  * 
+  * @return viewResolver 
+  **/
+  @Bean
+  public InternalResourceViewResolver viewResolver() {
+    InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+    viewResolver.setPrefix("/templates/");
+    viewResolver.setSuffix(".html");
+    return viewResolver;
+  }
 }

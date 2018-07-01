@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SNMPApplication {
+public class SnmpApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SNMPApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(SnmpApplication.class, args);
+  }
 }
